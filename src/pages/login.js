@@ -14,7 +14,7 @@ const Login = props => {
     onCompleted: data => {
       localStorage.setItem('token', data.signIn);
       client.writeData({ data: { isLoggedIn: true } });
-      history.push(props.location.state.from || '/');
+      history.push(props.location?.state?.from || '/');
     }
   });
 
